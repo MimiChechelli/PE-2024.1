@@ -20,9 +20,9 @@ bateria_total <- amostra %>%
     coeficiente_variacao = (sd(battery_power) / mean(battery_power)) * 100
   )
 # Conclusão:
-## 
-## 
-## 
+## Podemos perceber que ainda que os smarthphones tenham evoluído muito ao longo dos anos,
+## com o touchscreen e outras tecnologias, a capacidade média da bateria continua igual.
+## Demonstrando que o consumo de energia não é ponto de foco que as empresas buscam aprimorar.
 
 # B: m_dep em função de touch_screen
 profundidade <- amostra %>% 
@@ -32,10 +32,10 @@ profundidade <- amostra %>%
     desvio_padrao = sd(m_dep),
     coef_variacao = (sd(m_dep) / mean(m_dep)) * 100
   )
+profundidade
 # Conclusão:
-## 
-## 
-## 
+## Dispositivos com tela sensível ao toque têm uma média de profundidade ligeiramente maior em comparação com os dispositivos sem tela sensível ao toque.
+## Além de terem um desvio padrão menor, ou seja, menos valores discrepantes.
 
 # C: int_memory em função de blue
 memoria_interna <- amostra %>% 
@@ -45,10 +45,11 @@ memoria_interna <- amostra %>%
     desvio_padrao = sd(int_memory),
     coef_variacao = (sd(int_memory) / mean(int_memory)) * 100
   )
+memoria_interna
 # Conclusão:
-## 
-##
-##
+## Dispositivos com Bluetooth têm uma média de memória interna ligeiramente menor em comparação com dispositivos sem Bluetooth.
+## O desvio padrão da memória interna para ambos os grupos é relativamente próximo.
+## O coeficiente de variação indica que a dispersão em relação à média é um pouco maior para dispositivos com Bluetooth.
 
 library(ggplot2)
 # Gráfico do item 1.a
